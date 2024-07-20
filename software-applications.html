@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Applications - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .subject-details {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            animation: fadeInUp 1s ease-in-out;
+            text-align: left;
+        }
+        .subject-details h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .subject-details h2 {
+            font-size: 1.8rem;
+            color: #004d40;
+            margin-top: 20px;
+        }
+        .subject-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .subject-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .subject-details ul li {
+            margin: 5px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <a href="CAT.html" class="back-button">&larr; Back to CAT</a>
+        <div class="subject-details">
+            <h1>Software Applications</h1>
+            <p>
+                Software applications are essential tools that allow users to perform specific tasks on a computer. Here is an overview of some key software applications used in Computer Applications Technology (CAT).
+            </p>
+            <div class="curriculum-section">
+                <h2>Key Software Applications</h2>
+                <ul>
+                    <li><strong>Word Processing Software:</strong> Used to create, edit, and format text documents. Examples include Microsoft Word and Google Docs.</li>
+                    <li><strong>Spreadsheet Software:</strong> Used for organizing, analyzing, and storing data in tabular form. Examples include Microsoft Excel and Google Sheets.</li>
+                    <li><strong>Database Software:</strong> Used to store, manage, and retrieve data efficiently. Examples include Microsoft Access and MySQL.</li>
+                    <li><strong>Presentation Software:</strong> Used to create visual presentations. Examples include Microsoft PowerPoint and Google Slides.</li>
+                    <li><strong>Graphic Design Software:</strong> Used to create and edit visual content. Examples include Adobe Photoshop and Canva.</li>
+                    <li><strong>Web Browsers:</strong> Software applications used to access and navigate the internet. Examples include Google Chrome, Mozilla Firefox, and Microsoft Edge.</li>
+                    <li><strong>Operating Systems:</strong> Software that manages computer hardware and software resources. Examples include Microsoft Windows, macOS, and Linux.</li>
+                    <li><strong>Multimedia Software:</strong> Used for creating and editing audio and video content. Examples include Adobe Premiere Pro and Audacity.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Learn More About Software Applications</h2>
+            <p>Watch the video below to get a comprehensive overview of various software applications used in different fields.</p>
+            <div class="video-container">
+                <iframe width="330" height="315" src="https://www.youtube.com/embed/k700gkSs8rE?si=xBDnar-HhAv7c_gFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+          <p>This app is a Property of Senzo Dube All Rights Reserved </p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

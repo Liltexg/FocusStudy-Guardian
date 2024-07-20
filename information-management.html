@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Management - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .subject-details {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            animation: fadeInUp 1s ease-in-out;
+            text-align: left;
+        }
+        .subject-details h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .subject-details h2 {
+            font-size: 1.8rem;
+            color: #004d40;
+            margin-top: 20px;
+        }
+        .subject-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .subject-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .subject-details ul li {
+            margin: 5px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <a href="CAT.html" class="back-button">&larr; Back to CAT</a>
+        <div class="subject-details">
+            <h1>Information Management</h1>
+            <p>
+                Information management involves the collection, storage, dissemination, archiving, and proper disposal of information. Here is an overview of key concepts related to information management in Computer Applications Technology (CAT).
+            </p>
+            <div class="curriculum-section">
+                <h2>Key Concepts in Information Management</h2>
+                <ul>
+                    <li><strong>Data Collection:</strong> The process of gathering information from various sources. Effective data collection methods ensure accuracy and reliability of data.</li>
+                    <li><strong>Data Storage:</strong> Involves saving data in a manner that allows for easy retrieval and management. Common storage methods include databases, cloud storage, and local storage on devices.</li>
+                    <li><strong>Data Security:</strong> Ensuring that data is protected from unauthorized access and breaches. This includes implementing encryption, access controls, and regular security audits.</li>
+                    <li><strong>Data Analysis:</strong> The process of examining data sets to draw conclusions and make informed decisions. Tools like spreadsheets and data analysis software are commonly used.</li>
+                    <li><strong>Data Dissemination:</strong> The distribution of information to the relevant stakeholders. This can be done through reports, dashboards, and other communication tools.</li>
+                    <li><strong>Data Archiving:</strong> Long-term storage of data that is not frequently accessed but may be needed for future reference. Archived data should be organized and easily retrievable.</li>
+                    <li><strong>Data Disposal:</strong> Proper disposal of data that is no longer needed. This ensures that sensitive information is permanently destroyed and cannot be recovered by unauthorized parties.</li>
+                </ul>
+            </div>
+            <div class="curriculum-section">
+                <h2>Data Lifecycle</h2>
+                <p>The data lifecycle represents the stages that data goes through from creation to disposal:</p>
+                <ul>
+                    <li><strong>Creation:</strong> Data is generated through various activities and processes.</li>
+                    <li><strong>Storage:</strong> Data is stored in a structured manner for easy access and management.</li>
+                    <li><strong>Use:</strong> Data is accessed and used for analysis, decision-making, and other purposes.</li>
+                    <li><strong>Sharing:</strong> Data is shared with relevant stakeholders through appropriate channels.</li>
+                    <li><strong>Archiving:</strong> Data is moved to long-term storage when it is no longer actively used but needs to be retained.</li>
+                    <li><strong>Disposal:</strong> Data is securely destroyed when it is no longer needed, ensuring it cannot be accessed or recovered.</li>
+                </ul>
+            </div>
+            <div class="curriculum-section">
+                <h2>Best Practices in Information Management</h2>
+                <ul>
+                    <li><strong>Regular Backups:</strong> Ensure that data is backed up regularly to prevent loss in case of hardware failure or other issues.</li>
+                    <li><strong>Data Encryption:</strong> Use encryption to protect sensitive data, both in transit and at rest.</li>
+                    <li><strong>Access Controls:</strong> Implement strict access controls to ensure that only authorized personnel can access sensitive data.</li>
+                    <li><strong>Data Quality Assurance:</strong> Regularly check data for accuracy and completeness to maintain high data quality.</li>
+                    <li><strong>Compliance with Regulations:</strong> Ensure that data management practices comply with relevant laws and regulations, such as GDPR or HIPAA.</li>
+                    <li><strong>Data Governance:</strong> Establish clear policies and procedures for data management to ensure consistency and accountability.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

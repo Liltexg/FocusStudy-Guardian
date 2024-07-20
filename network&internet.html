@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networks and Internet - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .subject-details {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            animation: fadeInUp 1s ease-in-out;
+            text-align: left;
+        }
+        .subject-details h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .subject-details h2 {
+            font-size: 1.8rem;
+            color: #004d40;
+            margin-top: 20px;
+        }
+        .subject-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .subject-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .subject-details ul li {
+            margin: 5px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <a href="CAT.html" class="back-button">&larr; Back to CAT</a>
+        <div class="subject-details">
+            <h1>Networks and Internet</h1>
+            <p>
+                Networks and the internet are fundamental components of modern computing, allowing for communication and data exchange. Here is an overview of key concepts related to networks and the internet.
+            </p>
+            <div class="curriculum-section">
+                <h2>Key Concepts in Networking</h2>
+                <ul>
+                    <li><strong>Local Area Network (LAN):</strong> A network that connects computers within a limited area, such as a home, school, or office building.</li>
+                    <li><strong>Wide Area Network (WAN):</strong> A network that spans a large geographic area, connecting multiple LANs. The internet is the largest WAN.</li>
+                    <li><strong>Wireless Networks:</strong> Networks that use radio waves to connect devices, including Wi-Fi networks.</li>
+                    <li><strong>Ethernet:</strong> A common method for connecting devices in a wired LAN.</li>
+                    <li><strong>Network Topologies:</strong> The arrangement of different elements (links, nodes) in a computer network. Examples include star, ring, and mesh topologies.</li>
+                    <li><strong>Internet Protocol (IP):</strong> A set of rules for sending and receiving data over the internet. IP addresses identify devices on a network.</li>
+                    <li><strong>Domain Name System (DNS):</strong> Translates human-friendly domain names (like www.example.com) into IP addresses.</li>
+                    <li><strong>Firewalls:</strong> Security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules.</li>
+                    <li><strong>Virtual Private Network (VPN):</strong> Extends a private network across a public network, allowing users to send and receive data as if their devices were directly connected to the private network.</li>
+                </ul>
+            </div>
+            <div class="curriculum-section">
+                <h2>The Internet</h2>
+                <p>The internet is a global network of interconnected computers that communicate through standardized protocols. It enables a wide range of services and applications, including:</p>
+                <ul>
+                    <li><strong>World Wide Web (WWW):</strong> An information system where documents and other web resources are identified by URLs and accessed via browsers.</li>
+                    <li><strong>Email:</strong> A method of exchanging digital messages between people using electronic devices.</li>
+                    <li><strong>File Transfer Protocol (FTP):</strong> A standard network protocol used for transferring files between a client and server.</li>
+                    <li><strong>Streaming Services:</strong> Platforms that deliver multimedia content, such as video and music, over the internet in real-time.</li>
+                    <li><strong>Social Media:</strong> Websites and applications that enable users to create and share content or participate in social networking.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+          <p>This app is a Property of Senzo Dube All Rights Reserved </p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT Quizzes - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .grade-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .grade-card {
+            background: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .grade-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .grade-card h2 {
+            font-size: 1rem;
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+        .quiz-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-in-out;
+            display: none;
+        }
+        .quiz-section h1 {
+            font-size: 2rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .quiz-section .question {
+            margin: 20px 0;
+        }
+        .quiz-section .question h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .quiz-section .question label {
+            display: block;
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .submit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .submit-button:hover {
+            background-color: #004d40;
+        }
+        .result {
+            font-size: 1.5rem;
+            color: #00796b;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        function showQuiz(grade) {
+            document.querySelectorAll('.quiz-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(`quiz-${grade}`).style.display = 'block';
+        }
+
+        function checkAnswers(grade) {
+            const correctAnswers = {
+                "grade-10": {
+                    q1: "a",
+                    q2: "a",
+                    q3: "d",
+                    q4: "c",
+                    q5: "b"
+                },
+                "grade-11": {
+                    q1: "a",
+                    q2: "d",
+                    q3: "a",
+                    q4: "c",
+                    q5: "b"
+                },
+                "grade-12": {
+                    q1: "a",
+                    q2: "c",
+                    q3: "b",
+                    q4: "d",
+                    q5: "b"
+                }
+            };
+            let score = 0;
+            const gradeAnswers = correctAnswers[grade];
+            for (const [key, value] of Object.entries(gradeAnswers)) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === value) {
+                    score += 1;
+                }
+            }
+            document.getElementById(`result-${grade}`).textContent = `You scored ${score} out of 5`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="grade-container">
+            <div class="grade-card" onclick="showQuiz('grade-10')">
+                <h2>Grade 10</h2>
+            </div>
+            <div class="grade-card" onclick="showQuiz('grade-11')">
+                <h2>Grade 11</h2>
+            </div>
+            <div class="grade-card" onclick="showQuiz('grade-12')">
+                <h2>Grade 12</h2>
+            </div>
+        </div>
+
+        <!-- Grade 10 Quiz -->
+        <div class="quiz-section" id="quiz-grade-10">
+            <h1>Grade 10 Quiz</h1>
+            <form id="quizForm-grade-10">
+                <div class="question">
+                    <h3>1. What does CPU stand for?</h3>
+                    <label><input type="radio" name="q1" value="a"> Central Processing Unit</label>
+                    <label><input type="radio" name="q1" value="b"> Central Process Unit</label>
+                    <label><input type="radio" name="q1" value="c"> Computer Personal Unit</label>
+                    <label><input type="radio" name="q1" value="d"> Central Processor Unit</label>
+                </div>
+                <div class="question">
+                    <h3>2. Which of the following is a non-volatile memory?</h3>
+                    <label><input type="radio" name="q2" value="a"> ROM</label>
+                    <label><input type="radio" name="q2" value="b"> RAM</label>
+                    <label><input type="radio" name="q2" value="c"> Cache</label>
+                    <label><input type="radio" name="q2" value="d"> Registers</label>
+                </div>
+                <div class="question">
+                    <h3>3. What is the purpose of an operating system?</h3>
+                    <label><input type="radio" name="q3" value="a"> To manage hardware resources</label>
+                    <label><input type="radio" name="q3" value="b"> To provide a user interface</label>
+                    <label><input type="radio" name="q3" value="c"> To execute and provide services for applications software</label>
+                    <label><input type="radio" name="q3" value="d"> All of the above</label>
+                </div>
+                <div class="question">
+                    <h3>4. Which one is an input device?</h3>
+                    <label><input type="radio" name="q4" value="a"> Monitor</label>
+                    <label><input type="radio" name="q4" value="b"> Printer</label>
+                    <label><input type="radio" name="q4" value="c"> Keyboard</label>
+                    <label><input type="radio" name="q4" value="d"> Speaker</label>
+                </div>
+                <div class="question">
+                    <h3>5. What is the full form of GUI?</h3>
+                    <label><input type="radio" name="q5" value="a
+                    <label><input type="radio" name="q5" value="a"> General User Interface</label>
+                    <label><input type="radio" name="q5" value="b"> Graphical User Interface</label>
+                    <label><input type="radio" name="q5" value="c"> Graphical Utility Interface</label>
+                    <label><input type="radio" name="q5" value="d"> General User Integration</label>
+                </div>
+                <button type="button" class="submit-button" onclick="checkAnswers('grade-10')">Submit</button>
+                <div id="result-grade-10" class="result"></div>
+            </form>
+        </div>
+
+        <!-- Grade 11 Quiz -->
+        <div class="quiz-section" id="quiz-grade-11">
+            <h1>Grade 11 Quiz</h1>
+            <form id="quizForm-grade-11">
+                <div class="question">
+                    <h3>1. What does the acronym HTML stand for?</h3>
+                    <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label>
+                    <label><input type="radio" name="q1" value="b"> HyperText Machine Language</label>
+                    <label><input type="radio" name="q1" value="c"> HyperText Multilayer Language</label>
+                    <label><input type="radio" name="q1" value="d"> HyperText Markup Layer</label>
+                </div>
+                <div class="question">
+                    <h3>2. Which language is used for styling web pages?</h3>
+                    <label><input type="radio" name="q2" value="a"> HTML</label>
+                    <label><input type="radio" name="q2" value="b"> JavaScript</label>
+                    <label><input type="radio" name="q2" value="c"> PHP</label>
+                    <label><input type="radio" name="q2" value="d"> CSS</label>
+                </div>
+                <div class="question">
+                    <h3>3. What is the purpose of a database?</h3>
+                    <label><input type="radio" name="q3" value="a"> To store data</label>
+                    <label><input type="radio" name="q3" value="b"> To process data</label>
+                    <label><input type="radio" name="q3" value="c"> To delete data</label>
+                    <label><input type="radio" name="q3" value="d"> To print data</label>
+                </div>
+                <div class="question">
+                    <h3>4. Which of these is an example of a database management system?</h3>
+                    <label><input type="radio" name="q4" value="a"> Microsoft Word</label>
+                    <label><input type="radio" name="q4" value="b"> Microsoft Excel</label>
+                    <label><input type="radio" name="q4" value="c"> MySQL</label>
+                    <label><input type="radio" name="q4" value="d"> Adobe Photoshop</label>
+                </div>
+                <div class="question">
+                    <h3>5. What is an algorithm?</h3>
+                    <label><input type="radio" name="q5" value="a"> A type of software</label>
+                    <label><input type="radio" name="q5" value="b"> A sequence of steps for solving a problem</label>
+                    <label><input type="radio" name="q5" value="c"> A programming language</label>
+                    <label><input type="radio" name="q5" value="d"> A computer hardware component</label>
+                </div>
+                <button type="button" class="submit-button" onclick="checkAnswers('grade-11')">Submit</button>
+                <div id="result-grade-11" class="result"></div>
+            </form>
+        </div>
+
+        <!-- Grade 12 Quiz -->
+        <div class="quiz-section" id="quiz-grade-12">
+            <h1>Grade 12 Quiz</h1>
+            <form id="quizForm-grade-12">
+                <div class="question">
+                    <h3>1. What is a class in object-oriented programming?</h3>
+                    <label><input type="radio" name="q1" value="a"> A data structure</label>
+                    <label><input type="radio" name="q1" value="b"> A method</label>
+                    <label><input type="radio" name="q1" value="c"> A type of variable</label>
+                    <label><input type="radio" name="q1" value="d"> A blueprint for objects</label>
+                </div>
+                <div class="question">
+                    <h3>2. What is encapsulation in programming?</h3>
+                    <label><input type="radio" name="q2" value="a"> Hiding implementation details</label>
+                    <label><input type="radio" name="q2" value="b"> Extending classes</label>
+                    <label><input type="radio" name="q2" value="c"> Overloading methods</label>
+                    <label><input type="radio" name="q2" value="d"> Creating objects</label>
+                </div>
+                <div class="question">
+                    <h3>3. What is the main purpose of a compiler?</h3>
+                    <label><input type="radio" name="q3" value="a"> To execute code</label>
+                    <label><input type="radio" name="q3" value="b"> To convert code into machine language</label>
+                    <label><input type="radio" name="q3" value="c"> To debug code</label>
+                    <label><input type="radio" name="q3" value="d"> To format code</label>
+                </div>
+                <div class="question">
+                    <h3>4. Which of the following is a common data structure?</h3>
+                    <label><input type="radio" name="q4" value="a"> File</label>
+                    <label><input type="radio" name="q4" value="b"> Table</label>
+                    <label><input type="radio" name="q4" value="c"> Stack</label>
+                    <label><input type="radio" name="q4" value="d"> Document</label>
+                </div>
+                <div class="question">
+                    <h3>5. What is polymorphism in programming?</h3>
+                    <label><input type="radio" name="q5" value="a"> A type of class</label>
+                    <label><input type="radio" name="q5" value="b"> A method of class</label>
+                    <label><input type="radio" name="q5" value="c"> The ability of a function to take many forms</label>
+                    <label><input type="radio" name="q5" value="d"> A type of loop</label>
+                </div>
+                <button type="button" class="submit-button" onclick="checkAnswers('grade-12')">Submit</button>
+                <div id="result-grade-12" class="result"></div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>
