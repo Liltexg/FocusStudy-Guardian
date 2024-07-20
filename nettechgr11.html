@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Technologies - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .content h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #00796b;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1>Network Technologies</h1>
+            
+            <h2>Introduction to Network Technologies</h2>
+            <p>Network Technologies refer to the hardware, software, and protocols used to create and manage networks. Understanding these technologies is crucial for designing, implementing, and troubleshooting networks.</p>
+            
+            <h2>Types of Networks</h2>
+            <p>Networks can be classified based on their geographical coverage and scale:</p>
+            <ul>
+                <li><strong>Local Area Network (LAN):</strong> A network that connects computers within a limited area such as a home, office, or school.</li>
+                <li><strong>Wide Area Network (WAN):</strong> A network that covers a broad area, such as a city, country, or even global connections. The internet is an example of a WAN.</li>
+                <li><strong>Metropolitan Area Network (MAN):</strong> A network that covers a larger area than a LAN but smaller than a WAN, such as a city or a large campus.</li>
+                <li><strong>Personal Area Network (PAN):</strong> A small network used for personal devices within a very short range, such as connecting a smartphone to a laptop via Bluetooth.</li>
+            </ul>
+            
+            <h2>Network Topologies</h2>
+            <p>Network topology refers to the arrangement of different elements (links, nodes, etc.) in a computer network. Common topologies include:</p>
+            <ul>
+                <li><strong>Bus Topology:</strong> All devices are connected to a single central cable, known as the bus.</li>
+                <li><strong>Star Topology:</strong> All devices are connected to a central hub or switch.</li>
+                <li><strong>Ring Topology:</strong> Devices are connected in a circular fashion, where each device has exactly two neighbors.</li>
+                <li><strong>Mesh Topology:</strong> Each device is connected to every other device in the network.</li>
+                <li><strong>Hybrid Topology:</strong> A combination of two or more different topologies.</li>
+            </ul>
+
+            <h2>Network Devices</h2>
+            <p>Various devices are used to establish and manage networks:</p>
+            <ul>
+                <li><strong>Router:</strong> A device that routes data between different networks.</li>
+                <li><strong>Switch:</strong> A device that connects multiple devices within a LAN and manages data traffic.</li>
+                <li><strong>Hub:</strong> A basic device that connects multiple devices in a network but does not manage traffic efficiently.</li>
+                <li><strong>Modem:</strong> A device that modulates and demodulates signals for data transmission over telephone lines.</li>
+                <li><strong>Access Point:</strong> A device that allows wireless devices to connect to a wired network.</li>
+                <li><strong>Firewall:</strong> A security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</li>
+            </ul>
+
+            <h2>Networking Protocols</h2>
+            <p>Networking protocols define the rules and conventions for communication between network devices:</p>
+            <ul>
+                <li><strong>Transmission Control Protocol (TCP):</strong> A protocol that ensures reliable data transmission by establishing a connection and verifying data delivery.</li>
+                <li><strong>Internet Protocol (IP):</strong> A protocol that handles addressing and routing of data packets between devices on a network.</li>
+                <li><strong>Hypertext Transfer Protocol (HTTP):</strong> A protocol used for transferring web pages over the internet.</li>
+                <li><strong>File Transfer Protocol (FTP):</strong> A protocol used for transferring files between computers on a network.</li>
+                <li><strong>Simple Mail Transfer Protocol (SMTP):</strong> A protocol used for sending emails.</li>
+                <li><strong>Post Office Protocol (POP) and Internet Message Access Protocol (IMAP):</strong> Protocols used for receiving and storing emails.</li>
+            </ul>
+
+            <h2>Network Security</h2>
+            <p>Network security involves protecting a network from unauthorized access and threats:</p>
+            <ul>
+                <li><strong>Encryption:</strong> The process of encoding data to prevent unauthorized access.</li>
+                <li><strong>Firewalls:</strong> Devices or software that monitor and control network traffic based on security rules.</li>
+                <li><strong>Antivirus Software:</strong> Programs designed to detect and remove malware from a network.</li>
+                <li><strong>Virtual Private Network (VPN):</strong> A service that creates a secure, encrypted connection over a less secure network, such as the internet.</li>
+            </ul>
+
+            <a href="CAT-grade11.html" class="back-button">Back to CAT Grade 11</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Basics - Grade 12 CAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .content-container h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content-container h2 {
+            font-size: 1.8rem;
+            color: #004d40;
+            margin-bottom: 15px;
+        }
+        .content-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .content-container ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content-container ul li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="content-container">
+            <h1>Network Basics - Grade 12 CAT</h1>
+            
+            <h2>1. Networks</h2>
+            <p>Networks are systems that connect multiple devices to share resources and information. Key types of networks include:</p>
+            <ul>
+                <li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area such as a home or office.</li>
+                <li><strong>WAN (Wide Area Network):</strong> Connects devices over large geographic areas, such as between cities or countries.</li>
+                <li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger area than a LAN but is smaller than a WAN, such as a city or campus network.</li>
+                <li><strong>VPN (Virtual Private Network):</strong> Provides a secure connection over a public network by encrypting data.</li>
+            </ul>
+
+            <h2>2. Intranet vs Internet</h2>
+            <p>The key difference between intranet and internet:</p>
+            <ul>
+                <li><strong>Intranet:</strong> A private network used within an organization to share information and resources among its members.</li>
+                <li><strong>Internet:</strong> A global network connecting millions of private, public, academic, business, and government networks worldwide.</li>
+            </ul>
+
+            <h2>3. Basic Network Security</h2>
+            <p>Network security involves protecting data during transmission and preventing unauthorized access:</p>
+            <ul>
+                <li><strong>Firewalls:</strong> Control the incoming and outgoing network traffic based on security rules.</li>
+                <li><strong>Encryption:</strong> Protects data by encoding it so that only authorized users can decode and access it.</li>
+                <li><strong>Antivirus Software:</strong> Detects and removes malware that could compromise network security.</li>
+                <li><strong>Strong Passwords:</strong> Use complex and unique passwords for accessing network resources.</li>
+                <li><strong>Regular Updates:</strong> Keep software and systems updated to protect against known vulnerabilities.</li>
+            </ul>
+
+            <h2>4. Network Devices</h2>
+            <p>Common devices used in networks:</p>
+            <ul>
+                <li><strong>Router:</strong> Directs data packets between devices and the internet or other networks.</li>
+                <li><strong>Switch:</strong> Connects multiple devices within a LAN and directs data to the appropriate device.</li>
+                <li><strong>Hub:</strong> Connects multiple devices in a network but does not direct data like a switch.</li>
+                <li><strong>Modem:</strong> Modulates and demodulates data signals for internet connectivity.</li>
+            </ul>
+
+            <h2>5. Network Topologies</h2>
+            <p>Network topology refers to the arrangement of devices and cables in a network:</p>
+            <ul>
+                <li><strong>Star Topology:</strong> All devices are connected to a central hub or switch.</li>
+                <li><strong>Bus Topology:</strong> All devices are connected to a single central cable.</li>
+                <li><strong>Ring Topology:</strong> Devices are connected in a circular fashion, with each device connected to two other devices.</li>
+                <li><strong>Mesh Topology:</strong> Devices are interconnected, with multiple paths for data to travel.</li>
+            </ul>
+
+            <h2>6. IP Addressing</h2>
+            <p>IP addresses identify devices on a network:</p>
+            <ul>
+                <li><strong>IP Address:</strong> A unique identifier assigned to each device on a network.</li>
+                <li><strong>IPv4:</strong> Uses 32-bit addresses, commonly written as four octets separated by periods (e.g., 192.168.0.1).</li>
+                <li><strong>IPv6:</strong> Uses 128-bit addresses to provide a larger address space, written as eight groups of four hexadecimal digits.</li>
+            </ul>
+
+            <h2>7. Network Protocols</h2>
+            <p>Protocols define the rules for data communication over a network:</p>
+            <ul>
+                <li><strong>TCP/IP (Transmission Control Protocol/Internet Protocol):</strong> The foundational protocol suite for internet communication.</li>
+                <li><strong>HTTP/HTTPS (Hypertext Transfer Protocol/Secure):</strong> Protocols for transferring web pages and secure communications.</li>
+                <li><strong>FTP (File Transfer Protocol):</strong> Used for transferring files between devices on a network.</li>
+            </ul>
+
+            <h2>8. Troubleshooting Network Issues</h2>
+            <p>Common network problems and solutions:</p>
+            <ul>
+                <li><strong>Connection Issues:</strong> Check cables, network devices, and connection settings.</li>
+                <li><strong>Slow Performance:</strong> Verify bandwidth usage and network congestion.</li>
+                <li><strong>Access Problems:</strong> Ensure proper permissions and configuration settings.</li>
+                <li><strong>Device Conflicts:</strong> Resolve conflicts with IP addresses and network devices.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet and WWW - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .content h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #00796b;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+        }
+        .content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1>Internet and WWW</h1>
+            
+            <h2>Introduction to the Internet</h2>
+            <p>The Internet is a global network of interconnected computers that communicate using standardized protocols. It enables users to access and share information from anywhere in the world. Key components of the Internet include:</p>
+            <ul>
+                <li><strong>Servers:</strong> Computers that store and serve content to other computers.</li>
+                <li><strong>Clients:</strong> Devices that request and use content from servers, such as computers, smartphones, and tablets.</li>
+                <li><strong>Protocols:</strong> Rules and standards that allow different devices and networks to communicate. Examples include TCP/IP and HTTP.</li>
+            </ul>
+            <img src="OIP (1).jpg" alt="Internet Network Diagram">
+            
+            <h2>Introduction to the World Wide Web (WWW)</h2>
+            <p>The World Wide Web (WWW) is a system of interlinked hypertext documents accessed via the Internet. It allows users to browse web pages and interact with multimedia content. Key components of the WWW include:</p>
+            <ul>
+                <li><strong>Web Pages:</strong> Documents written in HTML (HyperText Markup Language) that are displayed in web browsers.</li>
+                <li><strong>Web Browsers:</strong> Software applications like Google Chrome, Mozilla Firefox, and Safari that allow users to view and interact with web pages.</li>
+                <li><strong>URLs (Uniform Resource Locators):</strong> Addresses used to locate resources on the web, such as <code>https://www.example.com</code>.</li>
+                <li><strong>Web Servers:</strong> Servers that host and deliver web pages to clients over the Internet.</li>
+            </ul>
+            <img src="OIP (2).jpg" alt="WWW Diagram">
+
+            <h2>How the Internet Works</h2>
+            <p>The Internet operates through a series of interconnected networks that use packet switching to transmit data. Here’s a simplified overview of how data travels across the Internet:</p>
+            <ul>
+                <li><strong>Data Packets:</strong> Information is broken down into small packets for transmission.</li>
+                <li><strong>Routing:</strong> Routers direct packets through various paths across networks to reach their destination.</li>
+                <li><strong>Reassembly:</strong> At the destination, packets are reassembled to form the complete data.</li>
+            </ul>
+            <img src="download (2).jpg" alt="Internet Data Flow Diagram">
+            
+            <h2>Key Protocols and Technologies</h2>
+            <p>Several key protocols and technologies underpin the operation of the Internet and WWW:</p>
+            <ul>
+                <li><strong>Transmission Control Protocol (TCP):</strong> Ensures reliable delivery of data packets.</li>
+                <li><strong>Internet Protocol (IP):</strong> Handles addressing and routing of packets.</li>
+                <li><strong>Hypertext Transfer Protocol (HTTP):</strong> Protocol used for transferring web pages.</li>
+                <li><strong>Hypertext Transfer Protocol Secure (HTTPS):</strong> Secure version of HTTP that encrypts data.</li>
+                <li><strong>Domain Name System (DNS):</strong> Translates human-readable domain names to IP addresses.</li>
+            </ul>
+
+            <h2>Common Internet Services</h2>
+            <p>The Internet provides a wide range of services, including:</p>
+            <ul>
+                <li><strong>Email:</strong> Communication service that allows users to send and receive messages electronically.</li>
+                <li><strong>Social Media:</strong> Platforms for social networking and content sharing, such as Facebook and Twitter.</li>
+                <li><strong>Online Shopping:</strong> E-commerce platforms that enable users to buy and sell goods and services online.</li>
+                <li><strong>Streaming Services:</strong> Platforms that provide on-demand video and audio content, such as Netflix and Spotify.</li>
+            </ul>
+            <img src="OIP (4).jpg" alt="Common Internet Services">
+
+            <a href="CAT-grade11.html" class="back-button">Back to CAT Grade 11</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>
