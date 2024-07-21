@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory Test - Grade 12</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+        }
+        .test-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        .test-container h1 {
+            font-size: 2.8rem;
+            color: #00796b;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .instructions {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .instructions ul {
+            list-style-type: disc;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+        .instructions ul li {
+            margin-bottom: 12px;
+        }
+        .questions {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .questions h2 {
+            font-size: 1.6rem;
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+        .questions ol {
+            padding-left: 25px;
+        }
+        .questions ol li {
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 15px;
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+        }
+        .questions ol li:hover {
+            background-color: #b2dfdb;
+            transform: scale(1.02);
+        }
+        .answer-field {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+        }
+        .answer-field textarea {
+            width: 100%;
+            height: 140px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #a5d6a7;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        .check-btn {
+            display: block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00796b;
+            color: #ffffff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #004d40;
+            transform: scale(1.02);
+        }
+        .feedback {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .memo-field {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: #f1f8e9;
+            border: 1px solid #dcedc8;
+            border-radius: 8px;
+        }
+        .memo-field p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+        }
+        footer p {
+            margin: 8px 0;
+        }
+        footer a {
+            margin: 0 8px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="test-container">
+            <h1>Theory Test - Grade 12</h1>
+            
+            <div class="instructions">
+                <h2>Instructions:</h2>
+                <ul>
+                    <li>Read each question carefully before answering.</li>
+                    <li>Write your answers in the provided fields.</li>
+                    <li>Ensure all questions are answered.</li>
+                    <li>Click on a question to reveal the answer field.</li>
+                </ul>
+            </div>
+
+            <div class="questions">
+                <h2>Section A: Multiple Choice</h2>
+                <ol>
+                    <li onclick="toggleAnswer(1)">What is the primary purpose of virtual memory in a computer system?</li>
+                    <div class="answer-field" id="answer-1">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(1, 'Virtual memory allows a computer to compensate for shortages of physical memory by temporarily transferring data from RAM to disk storage.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-1"></div>
+                    </div>
+                    <div class="memo-field" id="memo-1">
+                        <p><strong>Memo:</strong> Virtual memory allows a computer to compensate for shortages of physical memory by temporarily transferring data from RAM to disk storage.</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(2)">Which of the following is a characteristic of RISC (Reduced Instruction Set Computer) architecture?</li>
+                    <div class="answer-field" id="answer-2">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(2, 'RISC architecture uses a small, highly optimized set of instructions.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-2"></div>
+                    </div>
+                    <div class="memo-field" id="memo-2">
+                        <p><strong>Memo:</strong> RISC architecture uses a small, highly optimized set of instructions.</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(3)">In the context of databases, what is normalization?</li>
+                    <div class="answer-field" id="answer-3">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(3, 'Normalization is the process of organizing data to reduce redundancy and improve data integrity.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-3"></div>
+                    </div>
+                    <div class="memo-field" id="memo-3">
+                        <p><strong>Memo:</strong> Normalization is the process of organizing data to reduce redundancy and improve data integrity.</p>
+                    </div>
+                </ol>
+
+                <h2>Section B: Short Answer</h2>
+                <ol>
+                    <li onclick="toggleAnswer(4)">Explain the concept of a class in object-oriented programming (OOP).</li>
+                    <div class="answer-field" id="answer-4">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(4, 'A class in OOP is a blueprint for creating objects, providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods).'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-4"></div>
+                    </div>
+                    <div class="memo-field" id="memo-4">
+                        <p><strong>Memo:</strong> A class in OOP is a blueprint for creating objects, providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods).</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(5)">What is the difference between a compiler and an interpreter?</li>
+                    <div class="answer-field" id="answer-5">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(5, 'A compiler translates the entire source code into machine code before execution, while an interpreter translates and executes the code line by line.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-5"></div>
+                    </div>
+                    <div class="memo-field" id="memo-5">
+                        <p><strong>Memo:</strong> A compiler translates the entire source code into machine code before execution, while an interpreter translates and executes the code line by line.</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(6)">Describe the process of data mining and its importance.</li>
+                    <div class="answer-field" id="answer-6">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(6, 'Data mining involves extracting useful information and patterns from large datasets. It is important for making data-driven decisions in various fields such as marketing, finance, and healthcare.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-6"></div>
+                    </div>
+                    <div class="memo-field" id="memo-6">
+                        <p><strong>Memo:</strong> Data mining involves extracting useful information and patterns from large datasets. It is important for making data-driven decisions in various fields such as marketing, finance, and healthcare.</p>
+                    </div>
+                </ol>
+
+                <h2>Section C: Long Answer</h2>
+                <ol>
+                    <li onclick="toggleAnswer(7)">Discuss the impact of quantum computing on cryptography.</li>
+                    <div class="answer-field" id="answer-7">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(7, 'Quantum computing could significantly impact cryptography by breaking many current encryption algorithms through quantum algorithms like Shor’s algorithm, which can factorize large numbers exponentially faster than classical algorithms. This poses a threat to data security and necessitates the development of quantum-resistant cryptographic methods.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-7"></div>
+                    </div>
+                    <div class="memo-field" id="memo-7">
+                        <p><strong>Memo:</strong> Quantum computing could significantly impact cryptography by breaking many current encryption algorithms through quantum algorithms like Shor’s algorithm, which can factorize large numbers exponentially faster than classical algorithms. This poses a threat to data security and necessitates the development of quantum-resistant cryptographic methods.</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(8)">Analyze the ethical implications of genetic engineering.</li>
+                    <div class="answer-field" id="answer-8">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(8, 'The ethical implications of genetic engineering include concerns about playing God, potential harm to the environment and human health, and socio-economic disparities that could arise from access to genetic modifications.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-8"></div>
+                    </div>
+                    <div class="memo-field" id="memo-8">
+                        <p><strong>Memo:</strong> The ethical implications of genetic engineering include concerns about playing God, potential harm to the environment and human health, and socio-economic disparities that could arise from access to genetic modifications.</p>
+                    </div>
+
+                    <li onclick="toggleAnswer(9)">Evaluate the role of cybersecurity in protecting personal and organizational data.</li>
+                    <div class="answer-field" id="answer-9">
+                        <textarea placeholder="Your answer here..."></textarea>
+                        <button onclick="checkAnswer(9, 'Cybersecurity plays a crucial role in protecting personal and organizational data from breaches, hacking, and theft. It involves implementing measures like firewalls, encryption, and secure authentication methods to safeguard sensitive information.'); event.stopPropagation();" class="check-btn">Check Answer</button>
+                        <div class="feedback" id="feedback-9"></div>
+                    </div>
+                    <div class="memo-field" id="memo-9">
+                        <p><strong>Memo:</strong> Cybersecurity plays a crucial role in protecting personal and organizational data from breaches, hacking, and theft. It involves implementing measures like firewalls, encryption, and secure authentication methods to safeguard sensitive information.</p>
+                    </div>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+    <script>
+        function toggleAnswer(id) {
+            var answerField = document.getElementById('answer-' + id);
+            var memoField = document.getElementById('memo-' + id);
+
+            // Toggle the display of answer and memo fields
+            if (answerField.style.display === 'none' || answerField.style.display === '') {
+                answerField.style.display = 'block';
+                memoField.style.display = 'none';
+            } else {
+                answerField.style.display = 'none';
+                memoField.style.display = 'block';
+            }
+        }
+
+        function checkAnswer(id, correctAnswer) {
+            var userAnswer = document.querySelector('#answer-' + id + ' textarea').value.trim();
+            var feedback = document.getElementById('feedback-' + id);
+
+            if (userAnswer.length > 0) {
+                if (userAnswer.toLowerCase().includes(correctAnswer.toLowerCase())) {
+                    feedback.textContent = 'Correct! Well done.';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'Incorrect. Review the memo for the correct answer.';
+                    feedback.style.color = 'red';
+                }
+            } else {
+                feedback.textContent = 'Please provide an answer before checking.';
+                feedback.style.color = 'orange';
+            }
+        }
+    </script>
+</body>
+</html>

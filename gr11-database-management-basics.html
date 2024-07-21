@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management Basics - Grade 11</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .content-container h1 {
+            font-size: 2.8rem;
+            color: #004d40;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #004d40;
+            padding-bottom: 10px;
+        }
+        .content-container h2 {
+            font-size: 2rem;
+            color: #00796b;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #00796b;
+            padding-bottom: 5px;
+        }
+        .content-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .content-container ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content-container ul li {
+            margin-bottom: 10px;
+        }
+        .content-container ul li a {
+            text-decoration: none;
+            color: #00796b;
+            transition: color 0.3s ease;
+        }
+        .content-container ul li a:hover {
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #e0f2f1;
+            padding: 10px;
+            border-left: 5px solid #00796b;
+            margin-bottom: 20px;
+        }
+        .important {
+            background-color: #ffebee;
+            padding: 10px;
+            border-left: 5px solid #c62828;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00796b;
+            color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #b2dfdb;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="content-container">
+            <h1>Database Management Basics - Grade 11</h1>
+
+            <div class="highlight">
+                <h2>1. Introduction to Databases</h2>
+                <p>Databases are organized collections of data that are used to manage and store information. Understanding the basics of databases is crucial for data management in various applications.</p>
+            </div>
+
+            <div class="important">
+                <h2>2. Types of Databases</h2>
+                <ul>
+                    <li><strong>Relational Databases:</strong> Use tables to store data and relationships between data.</li>
+                    <li><strong>NoSQL Databases:</strong> Handle unstructured data and are designed for large-scale data storage.</li>
+                    <li><strong>Distributed Databases:</strong> Data is stored across multiple locations or systems.</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h2>3. Database Management Systems (DBMS)</h2>
+                <p>A DBMS is software that allows users to define, create, maintain, and control access to the database. Common DBMS include MySQL, PostgreSQL, Oracle, and MongoDB.</p>
+            </div>
+
+            <div class="highlight">
+                <h2>4. Key Concepts in Database Management</h2>
+                <ul>
+                    <li><strong>Tables:</strong> Structures that organize data into rows and columns.</li>
+                    <li><strong>Primary Key:</strong> A unique identifier for each record in a table.</li>
+                    <li><strong>Foreign Key:</strong> A field in a table that links to the primary key of another table.</li>
+                    <li><strong>SQL (Structured Query Language):</strong> A standard language for managing and manipulating databases.</li>
+                </ul>
+            </div>
+
+            <div class="video-container">
+                <h2>5. Video Tutorial</h2>
+                <iframe src="https://www.youtube.com/embed/ubmwp8kbfPc" allowfullscreen></iframe>
+            </div>
+
+            <div class="highlight">
+                <h2>6. Practical Exercise</h2>
+                <p>Create a simple database using a DBMS of your choice. Define tables, set primary and foreign keys, and use SQL to insert, update, and query data.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube. All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

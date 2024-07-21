@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Practice - FocusStudy Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .exam-practice-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .exam-practice-container h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .exam-practice-container h2 {
+            font-size: 2rem;
+            color: #004d40;
+            margin-bottom: 15px;
+        }
+        .exam-practice-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .exam-practice-container ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .exam-practice-container ul li {
+            margin-bottom: 10px;
+        }
+        .exam-practice-container ul li a {
+            text-decoration: none;
+            color: #00796b;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        .exam-practice-container ul li a:hover {
+            color: #004d40;
+        }
+        .video-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 720px;
+            height: 405px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #004d40;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="exam-practice-container">
+            <h1>Exam Practice - Grade 10</h1>
+            <p>Prepare effectively with our comprehensive exam practice materials. Explore topics from various subjects and enhance your readiness for the upcoming exams.</p>
+
+            <h2>Key Areas for Practice</h2>
+            <ul>
+                <li><a href="theory-testgr10.html">Theory Test Grade 10</a></li>
+                <li><a href="theory-testgr11.html">Theory Test Grade 11</a></li>
+                <li><a href="theory-test.gr12.html">Theory Test Grade 12</a></li>
+            </ul>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/0k9FHRWiiho?si=JoPjVEJFwqDjVm9i" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>

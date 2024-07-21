@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory Test - Grade 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00796b;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .test-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        .test-container h1 {
+            font-size: 2.5rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .instructions {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .instructions ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .instructions ul li {
+            margin-bottom: 10px;
+        }
+        .questions {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .questions h2 {
+            font-size: 1.5rem;
+            color: #004d40;
+            margin-bottom: 15px;
+        }
+        .questions ol {
+            padding-left: 20px;
+        }
+        .questions ol li {
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .questions ol li:hover {
+            background-color: #b2dfdb;
+        }
+        .answer-field {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            position: relative;
+        }
+        .answer-field textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #a5d6a7;
+            font-size: 1rem;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        .check-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00796b;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .check-btn:hover {
+            background-color: #004d40;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .memo-field {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border: 1px solid #dcedc8;
+            border-radius: 8px;
+        }
+        .memo-field p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .memo-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .memo-section h2 {
+            font-size: 1.5rem;
+            color: #004d40;
+            margin-bottom: 15px;
+        }
+        .memo-section textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            margin: 0 5px;
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FocusStudy Guardian</div>
+    </header>
+    <div class="container">
+        <div class="test-container">
+            <h1>Theory Test - Grade 10</h1>
+            
+            <div class="instructions">
+                <h2>Instructions:</h2>
+                <ul>
+                    <li>Read each question carefully before answering.</li>
+                    <li>Take a Notepad or Notebook to write the answers.</li>
+                    <li>Answer all questions.</li>
+                    <li>Press the question to check your answer</li>
+                </ul>
+            </div>
+
+            <div class="questions">
+                <h2>Section A: Multiple Choice</h2>
+                <ol>
+                    <li onclick="toggleAnswer(1)">What is the main function of the CPU?
+                        <div class="answer-field" id="answer-1">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(1, 'The CPU performs the primary computations and processes data.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-1"></div>
+                        </div>
+                        <div class="memo-field" id="memo-1">
+                            <p><strong>Memo:</strong> The CPU performs the primary computations and processes data.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(2)">Which type of software is used to perform specific tasks?
+                        <div class="answer-field" id="answer-2">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(2, 'Application software is used to perform specific tasks.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-2"></div>
+                        </div>
+                        <div class="memo-field" id="memo-2">
+                            <p><strong>Memo:</strong> Application software is used to perform specific tasks.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(3)">Which of the following is an example of an input device?
+                        <div class="answer-field" id="answer-3">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(3, 'Examples of input devices include keyboards, mice, and scanners.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-3"></div>
+                        </div>
+                        <div class="memo-field" id="memo-3">
+                            <p><strong>Memo:</strong> Examples of input devices include keyboards, mice, and scanners.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Section B: Short Answer</h2>
+                <ol>
+                    <li onclick="toggleAnswer(4)">Explain what a file system is.
+                        <div class="answer-field" id="answer-4">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(4, 'A file system manages and organizes files on storage devices, allowing for efficient data access and storage.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-4"></div>
+                        </div>
+                        <div class="memo-field" id="memo-4">
+                            <p><strong>Memo:</strong> A file system manages and organizes files on storage devices, allowing for efficient data access and storage.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(5)">What is the difference between primary and secondary storage?
+                        <div class="answer-field" id="answer-5">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(5, 'Primary storage (RAM) is used for temporary storage while the computer is running, whereas secondary storage (HDD/SSD) is used for long-term storage of data and files.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-5"></div>
+                        </div>
+                        <div class="memo-field" id="memo-5">
+                            <p><strong>Memo:</strong> Primary storage (RAM) is used for temporary storage while the computer is running, whereas secondary storage (HDD/SSD) is used for long-term storage of data and files.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(6)">What are the advantages of using cloud storage?
+                        <div class="answer-field" id="answer-6">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(6, 'Advantages of cloud storage include accessibility from anywhere, reduced physical storage needs, and easy data backup and recovery.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-6"></div>
+                        </div>
+                        <div class="memo-field" id="memo-6">
+                            <p><strong>Memo:</strong> Advantages of cloud storage include accessibility from anywhere, reduced physical storage needs, and easy data backup and recovery.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Section C: Long Answer</h2>
+                <ol>
+                    <li onclick="toggleAnswer(7)">Discuss the impact of technology on education.
+                        <div class="answer-field" id="answer-7">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(7, 'Technology has transformed education by enabling online learning, access to vast resources, and interactive tools for students and teachers.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-7"></div>
+                        </div>
+                        <div class="memo-field" id="memo-7">
+                            <p><strong>Memo:</strong> Technology has transformed education by enabling online learning, access to vast resources, and interactive tools for students and teachers.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(8)">Describe the steps involved in the information processing cycle.
+                        <div class="answer-field" id="answer-8">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(8, 'The information processing cycle involves input, processing, storage, and output.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-8"></div>
+                        </div>
+                        <div class="memo-field" id="memo-8">
+                            <p><strong>Memo:</strong> The information processing cycle involves input, processing, storage, and output.</p>
+                        </div>
+                    </li>
+                    <li onclick="toggleAnswer(9)">Compare and contrast different types of computer networks.
+                        <div class="answer-field" id="answer-9">
+                            <textarea placeholder="Write your answer here..."></textarea>
+                            <button onclick="checkAnswer(9, 'Different types of computer networks include LAN (Local Area Network), WAN (Wide Area Network), and MAN (Metropolitan Area Network), each serving different geographic areas and purposes.')" class="check-btn">Check Answer</button>
+                            <div class="feedback" id="feedback-9"></div>
+                        </div>
+                        <div class="memo-field" id="memo-9">
+                            <p><strong>Memo:</strong> Different types of computer networks include LAN (Local Area Network), WAN (Wide Area Network), and MAN (Metropolitan Area Network), each serving different geographic areas and purposes.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 FocusStudy Guardian</p>
+        <p>This app is a Property of Senzo Dube All Rights Reserved</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </footer>
+    <script>
+        function toggleAnswer(id) {
+            var answerField = document.getElementById('answer-' + id);
+            var memoField = document.getElementById('memo-' + id);
+
+            // Toggle the display of answer and memo fields
+            if (answerField.style.display === 'none' || answerField.style.display === '') {
+                answerField.style.display = 'block';
+                memoField.style.display = 'none';
+            } else {
+                answerField.style.display = 'none';
+                memoField.style.display = 'block';
+            }
+        }
+
+        function checkAnswer(id, correctAnswer) {
+            var userAnswer = document.querySelector('#answer-' + id + ' textarea').value.trim();
+            var feedback = document.getElementById('feedback-' + id);
+
+            if (userAnswer.length > 0) {
+                if (userAnswer.toLowerCase().includes(correctAnswer.toLowerCase())) {
+                    feedback.textContent = 'Correct! Well done.';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'Incorrect. Review the memo for the correct answer.';
+                    feedback.style.color = 'red';
+                }
+            } else {
+                feedback.textContent = 'Please provide an answer before checking.';
+                feedback.style.color = 'orange';
+            }
+        }
+    </script>
+</body>
+</html>
