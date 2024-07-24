@@ -21,11 +21,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
             color: #00796b;
+        }
+        .back-button {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            text-decoration: none;
+            color: #00796b;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .back-button .material-icons {
+            font-size: 2rem;
+            margin-right: 5px;
         }
         .container {
             width: 80%;
@@ -104,6 +119,7 @@
 </head>
 <body>
     <header>
+        <a href="subjects.html" class="back-button"><span class="material-icons">arrow_back</span>Back</a>
         <div class="logo">FocusStudy Guardian</div>
     </header>
     <div class="container">
@@ -119,7 +135,6 @@
             </ul>
         </div>
     </div>
-    <a href="subjects.html" class="back-button">Back to Subjects</a>
     <footer>
         <p>&copy; 2024 FocusStudy Guardian</p>
         <p>This app is a Property of Senzo Dube All Rights Reserved</p>
