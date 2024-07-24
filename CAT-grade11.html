@@ -19,9 +19,8 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
         }
         .logo {
             font-size: 1.5rem;
@@ -29,9 +28,7 @@
             color: #00796b;
         }
         .back-button {
-            position: absolute;
-            left: 10px;
-            top: 10px;
+            margin-top: 10px;
             text-decoration: none;
             color: #00796b;
             font-size: 1.5rem;
@@ -119,8 +116,8 @@
 </head>
 <body>
     <header>
-        <a href="subjects.html" class="back-button"><span class="material-icons">arrow_back</span>Back</a>
         <div class="logo">FocusStudy Guardian</div>
+        <a href="subjects.html" class="back-button"><span class="material-icons">arrow_back</span>Back</a>
     </header>
     <div class="container">
         <div class="topics-list">
